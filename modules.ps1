@@ -2,6 +2,10 @@ function Get-Module-Not-Installed($module) {
     return -not(Get-InstalledModule $module -ErrorAction silentlycontinue)
 }
 
+if (Get-Module-Not-Installed PSReadLine) {
+    Install-Module PSReadLine -AllowPrerelease -Force
+}
+
 if (Get-Module-Not-Installed posh-git) {
     Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
 }
