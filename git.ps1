@@ -6,6 +6,14 @@ function gs() {
     git status
 }
 
+function gp() {
+    git push
+}
+
+function gpf() {
+    git push -f
+}
+
 function gcm($message) {
     git commit -m $message
 }
@@ -13,6 +21,11 @@ function gcm($message) {
 function gca($message) {
     gaa
     git commit -m $message
+}
+
+function gnuke() {
+    git reset --hard HEAD 
+    git clean -f 
 }
 
 function gwip() {
