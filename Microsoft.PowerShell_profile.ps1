@@ -11,4 +11,6 @@ if (Test-Path($ChocolateyProfile)) {
 Import-Module posh-git
 Import-Module PSReadLine
 Import-Module ZLocation
+Invoke-Expression (&starship init powershell)
+
 Clear-Host
