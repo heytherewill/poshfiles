@@ -1,11 +1,17 @@
-Set-Alias gaa 'git add -A'
+function gaa() {
+    git add -A
+}
+
+function gs() {
+    git status
+}
 
 function gcm($message) {
     git commit -m $message
 }
 
 function gca($message) {
-    git add -A
+    gaa
     git commit -m $message
 }
 
