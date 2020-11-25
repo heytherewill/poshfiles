@@ -13,4 +13,7 @@ Import-Module PSReadLine
 Import-Module ZLocation
 Invoke-Expression (&starship init powershell)
 
+# Fish-like autocompletion
+set-psreadlineoption -predictionsource history
+
 Clear-Host
