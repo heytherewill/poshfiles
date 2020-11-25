@@ -9,4 +9,5 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 Import-Module posh-git
+Import-Module ZLocation
 Clear-Host
