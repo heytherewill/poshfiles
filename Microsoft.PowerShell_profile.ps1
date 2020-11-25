@@ -16,4 +16,8 @@ Invoke-Expression (&starship init powershell)
 # Fish-like autocompletion
 set-psreadlineoption -predictionsource history
 
+# Better history search
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
 Clear-Host
