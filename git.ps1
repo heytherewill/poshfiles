@@ -2,19 +2,15 @@ function gaa() {
     git add -A
 }
 
-function gp() {
-    git push
-}
-
-function gpf() {
-    git push -f
+function gcb($branchName) {
+    git checkout -b $branchName
 }
 
 function gcm($message) {
     git commit -m $message
 }
 
-function gca($message) {
+function gcma($message) {
     gaa
     git commit -m $message
 }
@@ -24,18 +20,27 @@ function gnuke() {
     git clean -f 
 }
 
-function gwip() {
-    gca(":construction: WIP")
+function gpf() {
+    git push -f
+}
+
+function grh($size) {
+    git reset HEAD~$size
 }
 
 function gri($size) {
     git rebase -i HEAD~$size
 }
 
-function grh($size) {
-    git reset HEAD~$size
 function gs() {
     gaa
     git stash
 }
+
+function gsp() {
+    git stash pop
+}
+
+function gwip() {
+    gca(":construction: WIP")
 }
