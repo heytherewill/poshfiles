@@ -2,10 +2,6 @@ function gaa() {
     git add -A
 }
 
-function gs() {
-    git status
-}
-
 function gp() {
     git push
 }
@@ -38,4 +34,8 @@ function gri($size) {
 
 function grh($size) {
     git reset HEAD~$size
+function gs() {
+    gaa
+    git stash
+}
 }
