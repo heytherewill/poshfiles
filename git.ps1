@@ -6,6 +6,10 @@ function gcb($branchName) {
     git checkout -b $branchName
 }
 
+function gch($branchName) {
+    git checkout $branchName
+}
+
 function gcm($message) {
     git commit -m $message
 }
