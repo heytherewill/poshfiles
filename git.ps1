@@ -20,6 +20,7 @@ function gcma($message) {
 }
 
 function gnuke() {
+    gaa
     git reset --hard HEAD 
     git clean -f 
 }
