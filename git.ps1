@@ -6,8 +6,8 @@ function gcb($branchName) {
     git checkout -b $branchName
 }
 
-function gch($branchName) {
-    git checkout $branchName
+function gsw($branchName) {
+    git switch $branchName
 }
 
 function gcm($message) {
