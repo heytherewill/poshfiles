@@ -47,5 +47,5 @@ function gsp() {
 }
 
 function gwip() {
-    gca(":construction: WIP")
+    gcma(":construction: WIP")
 }
