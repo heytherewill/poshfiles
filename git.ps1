@@ -37,6 +37,12 @@ function gri($size) {
     git rebase -i HEAD~$size
 }
 
+function grif($size) {
+    gs
+    git rebase -i HEAD~$size
+    gsp
+}
+
 function gs() {
     gaa
     git stash
