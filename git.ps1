@@ -6,6 +6,12 @@ function gcb($branchName) {
     git checkout -b $branchName
 }
 
+function gspull($branchName) {
+    gs
+    git pull
+    gsp
+}
+
 function gsw($branchName) {
     git switch $branchName
 }
