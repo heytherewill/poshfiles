@@ -1,3 +1,6 @@
+Remove-Item alias:gcb -Force
+Remove-Item alias:gcm -Force
+
 function gaa() {
     git add -A
 }
