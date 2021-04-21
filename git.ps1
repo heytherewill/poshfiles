@@ -1,5 +1,6 @@
 Remove-Item alias:gcb -Force
 Remove-Item alias:gcm -Force
+Remove-Item alias:gp -Force
 
 function gaa() {
     git add -A
@@ -63,4 +64,12 @@ function gsp() {
 
 function gwip() {
     gcma(":construction: WIP")
+}
+
+function gp() {
+    git push
+}
+
+function gpl() {
+    git pull
 }
