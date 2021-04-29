@@ -73,3 +73,7 @@ function gp() {
 function gpl() {
     git pull
 }
+
+function gpatch() {
+    git diff | Set-Clipboard
+}
