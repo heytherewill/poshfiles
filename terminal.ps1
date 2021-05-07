@@ -13,3 +13,7 @@ function up($amount) {
         Set-Location ..
     }
 }
+
+function mklink() {
+    cmd /c mklink $args
+}
