@@ -21,7 +21,8 @@ Import-Module PSReadLine
 Import-Module ZLocation
 
 # Prompt
-Invoke-Expression (&starship init powershell)
+Import-Module oh-my-posh
+Set-PoshPrompt -Theme stelbent.minimal
 
 # Fish-like autocompletion
 set-psreadlineoption -predictionsource history

@@ -17,3 +17,7 @@ if (Get-Module-Not-Installed ZLocation) {
 if (Get-Module-Not-Installed Terminal-Icons) {
     Install-Module -Name Terminal-Icons -Repository PSGallery
 }
+
+if (Get-Module-Not-Installed oh-my-posh) {
+    Install-Module -Name oh-my-posh
+}
