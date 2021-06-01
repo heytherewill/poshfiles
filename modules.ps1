@@ -13,3 +13,7 @@ if (Get-Module-Not-Installed posh-git) {
 if (Get-Module-Not-Installed ZLocation) {
     Install-Module ZLocation -Scope CurrentUser
 }
+
+if (Get-Module-Not-Installed Terminal-Icons) {
+    Install-Module -Name Terminal-Icons -Repository PSGallery
+}

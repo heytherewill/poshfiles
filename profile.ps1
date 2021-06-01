@@ -26,6 +26,9 @@ Invoke-Expression (&starship init powershell)
 # Fish-like autocompletion
 set-psreadlineoption -predictionsource history
 
+# Pretty icons
+Import-Module -Name Terminal-Icons
+
 # Better history search
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
