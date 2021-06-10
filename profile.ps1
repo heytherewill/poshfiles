@@ -22,7 +22,7 @@ Import-Module ZLocation
 
 # Prompt
 Import-Module oh-my-posh
-Set-PoshPrompt -Theme stelbent.minimal
+Set-PoshPrompt "$root/heytherewill.omp.json"
 
 # Fish-like autocompletion
 set-psreadlineoption -predictionsource history
