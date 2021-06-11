@@ -5,6 +5,10 @@ $root = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 . "$root/terminal.ps1"
 . "$root/rg.ps1"
 
+if ($IsWindows) {
+  . "$root/windows.ps1"
+}
+
 # Package Manager
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
