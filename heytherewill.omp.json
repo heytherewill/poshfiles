@@ -8,6 +8,16 @@
         "alignment": "right",
         "segments": [
           {
+            "type": "executiontime",
+            "style": "plain",
+            "foreground": "#ff8080",
+            "properties": {
+              "threshold": 500,
+              "prefix": "executed in ",
+              "postfix": " <#ffffff,>|</> "
+            }
+          },
+          {
             "type": "shell",
             "style": "plain",
             "foreground": "#007acc",
