@@ -148,7 +148,7 @@
           {
             "type": "text",
             "style": "plain",
-            "foreground": "#26C6DA",
+            "foreground": "#91ddff",
             "properties": {
               "prefix": "",
               "postfix": "",
