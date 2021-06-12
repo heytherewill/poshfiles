@@ -18,6 +18,7 @@ git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documen
 - [gh](https://github.com/cli/cli)
 - [micro](https://github.com/zyedidia/micro)
 - [fzf](https://github.com/junegunn/fzf)
+- [bat](https://github.com/sharkdp/bat)
 
 ### Windows Only
 - [sudo](https://community.chocolatey.org/packages/Sudo)
