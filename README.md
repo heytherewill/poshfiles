@@ -16,6 +16,7 @@ git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documen
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [cloc](https://github.com/AlDanial/cloc)
 - [gh](https://github.com/cli/cli)
+- [micro](https://github.com/zyedidia/micro)
 
 ### Windows Only
 - [sudo](https://community.chocolatey.org/packages/Sudo)

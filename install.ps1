@@ -40,9 +40,9 @@ if ($IsWindows) {
         Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     } 
 
-    choco install ripgrep sudo powertoys cloc gh
+    choco install ripgrep sudo powertoys cloc gh micro
 }
 
 if ($IsMacOS) {
-    brew install ripgrep cloc gh 
+    brew install ripgrep cloc gh micro
 }
