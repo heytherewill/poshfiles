@@ -7,3 +7,7 @@ function up($amount) {
         }
     }
 }
+
+function back() {
+    z -
+}
