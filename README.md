@@ -20,6 +20,7 @@ git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documen
 - [fzf](https://github.com/junegunn/fzf)
 - [bat](https://github.com/sharkdp/bat)
 - [neofetch](https://github.com/dylanaraps/neofetch)
+- [tre](https://github.com/dduan/tre)
 
 ### Windows Only
 - [sudo](https://community.chocolatey.org/packages/Sudo)
