@@ -21,10 +21,6 @@ if (Get-Module-Not-Installed posh-git) {
     Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
 }
 
-if (Get-Module-Not-Installed ZLocation) {
-    Install-Module ZLocation -Scope CurrentUser
-}
-
 if (Get-Module-Not-Installed Terminal-Icons) {
     Install-Module -Name Terminal-Icons -Repository PSGallery
 }
@@ -40,9 +36,9 @@ if ($IsWindows) {
         Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     } 
 
-    choco install ripgrep sudo powertoys cloc gh micro fzf bat neofetch tre-command
+    choco install ripgrep sudo powertoys cloc gh micro fzf bat neofetch tre-command zoxide
 }
 
 if ($IsMacOS) {
-    brew install ripgrep cloc gh micro fzf bat neofetch tre-command
+    brew install ripgrep cloc gh micro fzf bat neofetch tre-command zoxide
 }

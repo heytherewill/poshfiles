@@ -21,8 +21,10 @@ Import-Module posh-git
 # Command line editing
 Import-Module PSReadLine
 
-# z to jump around
-Import-Module ZLocation
+# zoxide
+Invoke-Expression (& {
+  (zoxide init --hook 'pwd' powershell) -join "`n"
+})
 
 # Prompt
 Import-Module oh-my-posh
