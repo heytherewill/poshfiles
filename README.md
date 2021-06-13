@@ -24,5 +24,5 @@ git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documen
 - [tre](https://github.com/dduan/tre)
 
 ### Windows Only
-- [sudo](https://community.chocolatey.org/packages/Sudo)
+- [Scoop](https://github.com/lukesampson/scoop)
 - [PowerToys](https://github.com/microsoft/PowerToys)

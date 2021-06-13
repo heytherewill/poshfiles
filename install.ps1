@@ -30,13 +30,13 @@ if (Get-Module-Not-Installed oh-my-posh) {
 }
 
 if ($IsWindows) {
-    if (Test-CommandMissing choco) {
-        Set-ExecutionPolicy Bypass -Scope Process -Force
-        [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
-        Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    if (Test-CommandMissing scoop) {
+        Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+        scoop bucket add extras
     } 
 
     choco install ripgrep sudo powertoys cloc gh micro fzf bat neofetch tre-command zoxide
+    scoop install ripgrep powertoys cloc gh micro fzf bat neofetch tre-command zoxide
 }
 
 if ($IsMacOS) {
