@@ -33,12 +33,14 @@ if ($IsWindows) {
     if (Test-CommandMissing scoop) {
         Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
         scoop bucket add extras
+        scoop bucket add nerd-fonts
     } 
 
-    choco install ripgrep sudo powertoys cloc gh micro fzf bat neofetch tre-command zoxide
-    scoop install ripgrep powertoys cloc gh micro fzf bat neofetch tre-command zoxide
+    scoop install FiraCode-NF ripgrep powertoys cloc gh micro fzf bat neofetch tre-command zoxide
 }
 
 if ($IsMacOS) {
+    brew tap homebrew/cask-fonts
+    brew install --cask font-FiraCode-nerd-font
     brew install ripgrep cloc gh micro fzf bat neofetch tre-command zoxide
 }

@@ -3,7 +3,6 @@ Cross Platform PowerShell Scripts that fit my personal flow. Maybe they can help
 
 ## Installation
 
-- Instal a [NerdFont](https://www.nerdfonts.com/font-downloads)
 - Clone this repo:
 ```terminal
 git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documents\PowerShell
@@ -13,6 +12,7 @@ git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documen
 ## Packages installed by `install.ps1`
 
 ### All OS
+  [FiraCode NerdFont](https://www.nerdfonts.com/font-downloads)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [cloc](https://github.com/AlDanial/cloc)
