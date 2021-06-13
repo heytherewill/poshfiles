@@ -19,6 +19,7 @@ git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documen
 - [micro](https://github.com/zyedidia/micro)
 - [fzf](https://github.com/junegunn/fzf)
 - [bat](https://github.com/sharkdp/bat)
+- [neofetch](https://github.com/dylanaraps/neofetch)
 
 ### Windows Only
 - [sudo](https://community.chocolatey.org/packages/Sudo)
