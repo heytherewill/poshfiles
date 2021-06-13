@@ -12,7 +12,7 @@ git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documen
 ## Packages installed by `install.ps1`
 
 ### All OS
-  [FiraCode NerdFont](https://www.nerdfonts.com/font-downloads)
+- [FiraCode NerdFont](https://www.nerdfonts.com/font-downloads)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [cloc](https://github.com/AlDanial/cloc)
@@ -22,6 +22,7 @@ git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documen
 - [bat](https://github.com/sharkdp/bat)
 - [neofetch](https://github.com/dylanaraps/neofetch)
 - [tre](https://github.com/dduan/tre)
+- [grex](https://github.com/pemistahl/grex)
 
 ### Windows Only
 - [Scoop](https://github.com/lukesampson/scoop)

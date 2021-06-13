@@ -36,11 +36,11 @@ if ($IsWindows) {
         scoop bucket add nerd-fonts
     } 
 
-    scoop install FiraCode-NF ripgrep powertoys cloc gh micro fzf bat neofetch tre-command zoxide
+    scoop install FiraCode-NF ripgrep powertoys cloc gh micro fzf bat neofetch tre-command zoxide grex
 }
 
 if ($IsMacOS) {
     brew tap homebrew/cask-fonts
     brew install --cask font-FiraCode-nerd-font
-    brew install ripgrep cloc gh micro fzf bat neofetch tre-command zoxide
+    brew install ripgrep cloc gh micro fzf bat neofetch tre-command zoxide grex
 }
