@@ -66,6 +66,10 @@ function gsp() {
     git stash pop
 }
 
+function gst() {
+	git status
+}
+
 function gwip() {
     gcma(":construction: WIP")
 }
