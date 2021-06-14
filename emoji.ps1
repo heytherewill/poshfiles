@@ -36,5 +36,7 @@ Set-PSReadLineKeyHandler -Chord 'Shift+:' `
     [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
 
     $pickedEmoji = $emojiList | fzf
-    [Microsoft.PowerShell.PSConsoleReadLine]::Insert($emojiTable[$pickedEmoji])
+
+    $textToInject = if ($null -eq $pickedEmoji) { ":" } else { $emojiTable[$pickedEmoji] }
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert($textToInject)
 }
