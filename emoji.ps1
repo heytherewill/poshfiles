@@ -5,8 +5,6 @@ if ((Test-Path $emojiFile) -eq $false) {
   Invoke-RestMethod "https://raw.githubusercontent.com/github/gemoji/master/db/emoji.json" | ConvertTo-Json | Out-File -FilePath $emojiFile
 }
 
-$emojiList = @()
-$emojiTable = @{}
 $rawEmojiData = Get-Content $emojiFile | ConvertFrom-Json
 
 $emojiList = $rawEmojiData | ForEach-Object { $_.aliases }
@@ -15,6 +13,15 @@ foreach ($emojiInfo in $rawEmojiData) {
     foreach($alias in $emojiInfo.aliases) {
         $emojiTable[$alias] = $emojiInfo.emoji
     }
+}
+
+function emojify {
+    $text = $input
+    foreach ($emoji in $emojiList) {
+        $text = $text.Replace(":${emoji}:", $emojiTable[$emoji])
+    }
+
+    Write-Output $text
 }
 
 # Set autocompletion
