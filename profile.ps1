@@ -34,4 +34,7 @@ Import-Module -Name Terminal-Icons
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
+# Emoji autocompletion
+. "$root/emoji.ps1"
+
 Clear-Host
