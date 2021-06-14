@@ -11,3 +11,7 @@ function up($amount) {
 function back() {
     z -
 }
+
+function err() {
+    Write-Output $error
+}
