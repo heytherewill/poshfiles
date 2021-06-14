@@ -37,10 +37,14 @@ function glog() {
     git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 }
 
-function gnuke() {
-    gaa
-    git reset --hard HEAD 
-    git clean -f 
+function gnuke($file) {
+    if ($null -eq $file) {
+        gaa
+        git reset --hard HEAD
+        git clean -f
+    } else {
+        git restore $file
+    }
 }
 
 function gpf() {
