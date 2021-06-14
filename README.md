@@ -15,7 +15,7 @@ git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documen
 - [FiraCode NerdFont](https://www.nerdfonts.com/font-downloads)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
-- [cloc](https://github.com/AlDanial/cloc)
+- [tokei](https://github.com/XAMPPRocky/tokei)
 - [gh](https://github.com/cli/cli)
 - [micro](https://github.com/zyedidia/micro)
 - [fzf](https://github.com/junegunn/fzf)
