@@ -2,6 +2,10 @@ Remove-Item alias:gcb -Force
 Remove-Item alias:gcm -Force
 Remove-Item alias:gp -Force
 
+function ga($file) {
+    git add $file
+}
+
 function gaa() {
     git add -A
 }
