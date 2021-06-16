@@ -14,6 +14,7 @@ Import-Module posh-git
 
 # Command line editing
 Import-Module PSReadLine
+. "$root/psreadline.ps1"
 
 # zoxide
 Invoke-Expression (& {
