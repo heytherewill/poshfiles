@@ -10,6 +10,10 @@ function gaa() {
     git add -A
 }
 
+function gap($file) {
+	git add -p $file
+}
+
 function gcb($branchName) {
     git checkout -b $branchName
 }
