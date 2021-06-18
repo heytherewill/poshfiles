@@ -55,6 +55,10 @@ function gpf() {
     git push -f
 }
 
+function gpr() {
+    git push --set-upstream origin (git branch --show-current)
+}
+
 function grh($size) {
     git reset HEAD~$size
 }
