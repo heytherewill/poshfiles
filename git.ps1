@@ -29,6 +29,7 @@ function gspull($branchName) {
 }
 
 function gsw($branchName) {
+    $branchName ??= (git branch --list | rg -v "(^\*)" | fzf).Trim()
     git switch $branchName
 }
 
