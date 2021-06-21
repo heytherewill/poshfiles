@@ -14,6 +14,10 @@ function gap($file) {
 	git add -p $file
 }
 
+function gbclean() {
+    git branch --merged | rg -v "(^\*|master|main|dev)" | ForEach-Object { git branch -d $_.Trim() }
+}
+
 function gcb($branchName) {
     git checkout -b $branchName
 }
