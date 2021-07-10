@@ -88,7 +88,7 @@ function gsp() {
 }
 
 function gst() {
-	git status
+	git status -sb
 }
 
 function gwip() {
