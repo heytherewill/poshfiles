@@ -40,3 +40,7 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 . "$root/emoji.ps1"
 
 Clear-Host
+
+# Help tips so I don't forget all things I can use
+. "$root/tips.ps1"
+$tips | Get-Random | Write-Output
