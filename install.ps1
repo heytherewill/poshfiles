@@ -34,13 +34,14 @@ if ($IsWindows) {
         Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
         scoop bucket add extras
         scoop bucket add nerd-fonts
+        scoop bucket add java
     } 
 
-    scoop install FiraCode-NF ripgrep powertoys tokei gh micro fzf bat neofetch tre-command zoxide grex
+    scoop install FiraCode-NF ripgrep powertoys tokei gh micro fzf bat neofetch tre-command zoxide grex openjdk11
 }
 
 if ($IsMacOS) {
     brew tap homebrew/cask-fonts
     brew install --cask font-FiraCode-nerd-font
-    brew install ripgrep tokei gh micro fzf bat neofetch tre-command zoxide grex
+    brew install ripgrep tokei gh micro fzf bat neofetch tre-command zoxide grex openjdk@11
 }
