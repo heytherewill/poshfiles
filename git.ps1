@@ -22,6 +22,11 @@ function gcb($branchName) {
     git checkout -b $branchName
 }
 
+function gfix() {
+    $commitHash = (git log -n 50 --pretty=format:'%h %s' --no-merges | fzf).Substring(0, 7)
+    git commit --fixup $commitHash
+}
+
 function gspull($branchName) {
     gs
     git pull
@@ -69,7 +74,7 @@ function grh($size) {
 }
 
 function gri($size) {
-    git rebase -i HEAD~$size
+    git rebase -i --autosquash HEAD~$size
 }
 
 function grif($size) {
