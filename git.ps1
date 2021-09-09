@@ -23,8 +23,13 @@ function gcb($branchName) {
 }
 
 function gfix() {
-    $commitHash = (git log -n 50 --pretty=format:'%h %s' --no-merges | fzf).Substring(0, 7)
-    git commit --fixup $commitHash
+    $commitHash = (git log -n 50 --pretty=format:'%h %s' --no-merges | fzf)
+
+    if ($null -eq $commitHash) {
+        Write-Output "Operation cancelled"
+    } else {
+        git commit --fixup $commitHash.Substring(0, 7)
+    }
 }
 
 function gspull($branchName) {
@@ -34,8 +39,13 @@ function gspull($branchName) {
 }
 
 function gsw($branchName) {
-    $branchName ??= (git branch --list | rg -v "(^\*)" | fzf).Trim()
-    git switch $branchName
+    $branchName ??= (git branch --list | rg -v "(^\*)" | fzf)
+    
+    if ($null -eq $branchName) {
+        Write-Output "Operation cancelled"
+    } else {
+        git switch $branchName.Trim()
+    }
 }
 
 function gcm($message) {
