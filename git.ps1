@@ -3,7 +3,14 @@ Remove-Item alias:gcm -Force
 Remove-Item alias:gp -Force
 
 function ga($file) {
-    git add $file
+    if ($null -eq $file) {
+        (gst -Split [System.Environment]::NewLine) 
+        | Where-Object { !$_.StartsWith("##") }
+        | fzf -m
+        | ForEach-Object { git add $_.Substring(3, $_.Length - 3) }
+    } else {
+        git add $file
+    }
 }
 
 function gaa() {
