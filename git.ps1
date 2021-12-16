@@ -128,3 +128,7 @@ function gpl() {
 function gpatch() {
     git diff | Set-Clipboard
 }
+
+function vpr() {
+    gh pr view --web
+}
