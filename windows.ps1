@@ -1,16 +1,16 @@
 Set-Alias open 'explorer.exe'
+Remove-Item alias:pwd -Force
 
 function bin() {
     open shell:RecycleBinFolder
 }
 
+function pwd() {
+    (Get-Location) -Split [System.Environment]::newline | ? { ![System.String]::IsNullOrEmpty($_) }
+}
+
 function ccd() {
-    $prefix = "        Directory: "
-    
-    Get-ChildItem 
-    | rg $prefix
-    | ForEach-Object { $_.Substring($prefix.Length, $_.Length - $prefix.Length)  }
-    | Set-Clipboard
+    pwd | Set-Clipboard
 }
 
 function mklink() {
