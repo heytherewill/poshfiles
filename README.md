@@ -4,9 +4,18 @@ Cross Platform PowerShell Scripts that fit my personal flow. Maybe they can help
 ## Installation
 
 - Clone this repo:
+
+Windows:
+
 ```terminal
 git clone https://github.com/heytherewill/poshfiles.git $env:userprofile\Documents\PowerShell
 ```
+
+macOS:
+```terminal
+git clone https://github.com/heytherewill/poshfiles.git ~/.config/powershell
+```
+
 - Run `install.ps1` to install dependencies.
 
 ## Packages installed by `install.ps1`
