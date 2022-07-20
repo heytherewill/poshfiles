@@ -5,6 +5,7 @@ $root = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 . "$root/terminal.ps1"
 . "$root/typo.ps1"
 . "$root/rg.ps1"
+. "$root/spotify.ps1"
 
 if ($IsWindows) {
   . "$root/windows.ps1"
