@@ -32,13 +32,8 @@
         {
           "type": "battery",
           "style": "plain",
-          "foreground": "#ffffff",
-          "background_templates": [
-            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
-            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
-          ],
-          "template": " <#ffffff,>|</> {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295 ",
+          "foreground": "#91ddff",
+          "template": " <#ffffff,>|</> {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295",
           "properties": {
             "discharging_icon": "\uE231 ",
             "charging_icon": "\uE234 ",
@@ -62,19 +57,13 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#91ddff",
+          "foreground": "#ffffff",
           "properties": {
             "display_host": true
           },
           "style": "plain",
-          "template": "\u250c {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "template": "<#91ddff>\u250c</> {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "type": "os"
-        },
-        {
-          "foreground": "#ffffff",
-          "style": "plain",
-          "template": " {{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }}@{{ .HostName }} ",
-          "type": "session"
         },
         {
           "foreground": "#91ddff",
@@ -82,7 +71,7 @@
             "style": "mixed"
           },
           "style": "plain",
-          "template": " {{ .Path }} ",
+          "template": "{{ .Path }} ",
           "type": "path"
         },
         {
@@ -174,7 +163,7 @@
         {
           "foreground": "#ffffff",
           "style": "plain",
-          "template": "$",
+          "template": " $",
           "type": "text"
         }
       ],
