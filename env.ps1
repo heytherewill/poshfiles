@@ -1,0 +1,1 @@
+$pathSeparator = If ($IsWindows) {";"} Else {":"}

@@ -1,5 +1,6 @@
 # My aliases and custom scripts
 $root = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
+. "$root/env.ps1"
 . "$root/android.ps1"
 . "$root/git.ps1"
 . "$root/terminal.ps1"

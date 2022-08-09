@@ -1,8 +1,10 @@
-$adbIsInPath = $env:Path -like "*Android\Sdk\platform-tools*"
+$androidSdkPath = 
+    If ($IsWindows) { "%localappdata%\Android\Sdk" }
+    Else { "/Users/$(whoami)/Library/Android/sdk" }
 
-if (!$adbIsInPath) {
-    $env:Path += ";%localappdata%\Android\Sdk\platform-tools"
-}
+$env:ANDROID_HOME=$androidSdkPath
+$env:ANDROID_SDK_ROOT=$androidSdkPath
+$env:PATH="$($env:PATH)$($pathSeparator)$($androidSdkPath)/tools$($pathSeparator)$($androidSdkPath)/platform-tools"
 
 function aft() {
     Set-Location $env:UserProfile/Documents
