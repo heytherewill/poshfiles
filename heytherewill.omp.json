@@ -6,19 +6,20 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#ff8080",
-          "properties": {
-            "threshold": 500
-          },
+          "foreground": "#ffffff",
           "style": "plain",
-          "template": "executed in {{ .FormattedMs }} <#ffffff,>|</> ",
-          "type": "executiontime"
+          "template": "{",
+          "type": "text"
         },
         {
-          "foreground": "#007acc",
+          "type": "executiontime",
           "style": "plain",
-          "template": "{{ .Name }}",
-          "type": "shell"
+          "foreground": "#ff8080",
+          "template": "\ufbab {{ .FormattedMs }}<#ffffff>,</>",
+          "properties": {
+            "always_enabled": true,
+            "style": "austin"
+          }
         },
         {
           "foreground": "#ff8080",
@@ -26,14 +27,14 @@
             "root_icon": "root"
           },
           "style": "plain",
-          "template": " <#ffffff,>as</> \uf0e7",
+          "template": " sudo<#ffffff>,</>",
           "type": "root"
         },
         {
           "type": "battery",
           "style": "plain",
           "foreground": "#91ddff",
-          "template": " <#ffffff,>|</> {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295",
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295<#ffffff,>, </>",
           "properties": {
             "discharging_icon": "\uE231 ",
             "charging_icon": "\uE234 ",
@@ -46,8 +47,14 @@
             "time_format": "15:04:05"
           },
           "style": "plain",
-          "template": " <#ffffff,>|</> {{ .CurrentDate | date .Format }}",
+          "template": " {{ .CurrentDate | date .Format }}",
           "type": "time"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": " }",
+          "type": "text"
         }
       ],
       "type": "prompt"
