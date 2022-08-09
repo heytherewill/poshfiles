@@ -29,6 +29,10 @@ if (Get-Module-Not-Installed oh-my-posh) {
     Install-Module -Name oh-my-posh
 }
 
+if (Get-Module-Not-Installed PSFzf) {
+    Install-Module -Name PSFzf
+}
+
 if ($IsWindows) {
     if (Test-CommandMissing scoop) {
         Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')

@@ -38,6 +38,7 @@ Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 # Emoji autocompletion
+Import-Module PSFzf
 . "$root/emoji.ps1"
 
 Clear-Host
