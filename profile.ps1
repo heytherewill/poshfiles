@@ -26,8 +26,7 @@ Invoke-Expression (& {
 })
 
 # Prompt
-Import-Module oh-my-posh
-Set-PoshPrompt "$root/heytherewill.omp.json"
+oh-my-posh init pwsh --config $root/heytherewill.omp.json | Invoke-Expression
 
 # Fish-like autocompletion
 set-psreadlineoption -predictionsource history

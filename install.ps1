@@ -25,10 +25,6 @@ if (Get-Module-Not-Installed Terminal-Icons) {
     Install-Module -Name Terminal-Icons -Repository PSGallery
 }
 
-if (Get-Module-Not-Installed oh-my-posh) {
-    Install-Module -Name oh-my-posh
-}
-
 if (Get-Module-Not-Installed PSFzf) {
     Install-Module -Name PSFzf
 }
@@ -41,11 +37,11 @@ if ($IsWindows) {
         scoop bucket add java
     } 
 
-    scoop install FiraCode-NF ripgrep powertoys tokei gh micro fzf bat neofetch tre-command zoxide grex openjdk11
+    scoop install FiraCode-NF ripgrep powertoys tokei gh micro fzf bat neofetch tre-command zoxide grex openjdk11 oh-my-posh
 }
 
 if ($IsMacOS) {
     brew tap homebrew/cask-fonts
     brew install --cask font-FiraCode-nerd-font
-    brew install ripgrep tokei gh micro fzf bat neofetch tre-command zoxide grex openjdk@11
+    brew install ripgrep tokei gh micro fzf bat neofetch tre-command zoxide grex openjdk@11 jandedobbeleer/oh-my-posh/oh-my-posh
 }
