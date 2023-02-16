@@ -6,7 +6,6 @@ $env:ANDROID_HOME=$androidSdkPath
 $env:ANDROID_SDK_ROOT=$androidSdkPath
 $env:PATH="$($env:PATH)$($pathSeparator)$($androidSdkPath)/tools$($pathSeparator)$($androidSdkPath)/platform-tools"
 
-function aft() {
-    Set-Location $env:UserProfile/Documents
+function adbtrace() {
     adb pull /data/local/traces/
 }
