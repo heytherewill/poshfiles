@@ -18,6 +18,11 @@ git clone https://github.com/heytherewill/poshfiles.git ~/.config/powershell
 
 - Run `install.ps1` to install dependencies.
 
+|Windows|macOS|
+|-------|-----|
+|![Windows](screenshots/windows.png)|![macOS](screenshots/macos.png)|
+
+
 ## Packages installed by `install.ps1`
 
 ### All OS
