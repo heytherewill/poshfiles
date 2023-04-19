@@ -6,35 +6,35 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#ffffff",
+          "foreground": "#cad3f5",
           "style": "plain",
-          "template": "{",
+          "template": "{ ",
           "type": "text"
         },
         {
           "type": "executiontime",
           "style": "plain",
-          "foreground": "#ff8080",
-          "template": "\ufbab {{ .FormattedMs }}<#ffffff>,</>",
+          "foreground": "#ed8796",
+          "template": "\ufbab {{ .FormattedMs }}<#cad3f5>,</>",
           "properties": {
             "always_enabled": true,
             "style": "austin"
           }
         },
         {
-          "foreground": "#ff8080",
+          "foreground": "#ed8796",
           "properties": {
             "root_icon": "root"
           },
           "style": "plain",
-          "template": " sudo<#ffffff>,</>",
+          "template": " sudo<#cad3f5>,</>",
           "type": "root"
         },
         {
           "type": "battery",
           "style": "plain",
-          "foreground": "#91ddff",
-          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295<#ffffff,>, </>",
+          "foreground": "#7dc4e4",
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295<#cad3f5,>, </>",
           "properties": {
             "discharging_icon": "\uE231 ",
             "charging_icon": "\uE234 ",
@@ -42,7 +42,7 @@
           }
         },
         {
-          "foreground": "#91ddff",
+          "foreground": "#7dc4e4",
           "properties": {
             "time_format": "15:04:05"
           },
@@ -51,7 +51,7 @@
           "type": "time"
         },
         {
-          "foreground": "#ffffff",
+          "foreground": "#cad3f5",
           "style": "plain",
           "template": " }",
           "type": "text"
@@ -64,16 +64,16 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#ffffff",
+          "foreground": "#cad3f5",
           "properties": {
             "display_host": true
           },
           "style": "plain",
-          "template": "<#91ddff>\u250c</> {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "template": "<#7dc4e4>\u250c</> {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "type": "os"
         },
         {
-          "foreground": "#91ddff",
+          "foreground": "#7dc4e4",
           "properties": {
             "style": "mixed"
           },
@@ -82,14 +82,16 @@
           "type": "path"
         },
         {
-          "foreground": "#95ffa4",
+          "foreground": "#a6da95",
           "foreground_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#ff9248{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f73535{{ end }}",
-            "{{ if gt .Ahead 0 }}#ffee75{{ end }}",
-            "{{ if gt .Behind 0 }}#91ddff{{ end }}"
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#c6a0f6{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ed8796{{ end }}",
+            "{{ if gt .Ahead 0 }}#eed49f{{ end }}",
+            "{{ if gt .Behind 0 }}#7dc4e4{{ end }}"
           ],
           "properties": {
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
             "branch_ahead_icon": "\u2191",
             "branch_behind_icon": "\u2193",
             "branch_gone": "\u2262",
@@ -103,55 +105,55 @@
             "tag_icon": "\u25b6 "
           },
           "style": "plain",
-          "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} \u2502{{ end }}{{ if .Staging.Changed }}{{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}}{{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+          "template": " {{ .HEAD }}{{ .BranchStatus }}{{ if and (.Staging.Changed) (.Working.Changed) }} \u2502{{ end }}{{ if .Staging.Changed }}{{ .Staging.String }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
           "type": "git"
         },
         {
           "type": "dotnet",
           "style": "plain",
-          "foreground": "#178600",
+          "foreground": "#a6da95",
           "template": " \ue77f {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }} "
         },
         {
           "type": "java",
           "style": "plain",
-          "foreground": "#B07219",
+          "foreground": "#f5a97f",
           "template": " \ue738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
         },
         {
           "type": "node",
           "style": "plain",
-          "foreground": "#f1e05a",
+          "foreground": "#eed49f",
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
         },
         {
           "type": "swift",
           "style": "plain",
-          "foreground": "#f6553c",
+          "foreground": "#ee99a0",
           "template": " \ue755 {{ .Full }} "
         },
         {
           "type": "kotlin",
           "style": "plain",
-          "foreground": "#906cff",
+          "foreground": "#b7bdf8",
           "template": " \ufa05 {{ .Full }} "
         },
         {
           "type": "ruby",
           "style": "plain",
-          "foreground": "#CD2A18",
+          "foreground": "#ed8796",
           "template": " \ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
         },
         {
           "type": "python",
           "style": "plain",
-          "foreground": "#3572A5",
+          "foreground": "#8aadf4",
           "template": " \uE235 {{ .Full }} "
         },
         {
           "type": "exit",
           "style": "plain",
-          "foreground": "#ff8080",
+          "foreground": "#ed8796",
           "template": " {{ if gt .Code 0 }}error{{ else }}\uf42e{{ end }} "
         }
       ],
@@ -162,13 +164,13 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#91ddff",
+          "foreground": "#7dc4e4",
           "style": "plain",
           "template": "\u2514",
           "type": "text"
         },
         {
-          "foreground": "#ffffff",
+          "foreground": "#cad3f5",
           "style": "plain",
           "template": " $",
           "type": "text"
