@@ -25,6 +25,10 @@ function gbclean() {
     git branch --merged | rg -v "(^\*|master|main|dev)" | ForEach-Object { git branch -d $_.Trim() }
 }
 
+function gback() {
+    git checkout -
+}
+
 function gcb($branchName) {
     git checkout -b $branchName
 }
