@@ -98,10 +98,11 @@ function gri($size) {
     git rebase -i --autosquash HEAD~$size
 }
 
-function grif($size) {
-    gs
-    git rebase -i HEAD~$size
-    gsp
+function gri!($size) {
+    $sequenceEditor=$env:GIT_SEQUENCE_EDITOR
+    $env:GIT_SEQUENCE_EDITOR=$true
+    git rebase -i --autosquash HEAD~$size
+    $env:GIT_SEQUENCE_EDITOR=$sequenceEditor
 }
 
 function gs() {
