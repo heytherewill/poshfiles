@@ -25,7 +25,7 @@ function emojify {
 }
 
 # Set autocompletion
-Set-PSReadLineKeyHandler -Chord 'Shift+:' `
+Set-PSReadLineKeyHandler -Chord 'Shift+<' `
                          -BriefDescription GithubEmojiAutocompletion `
                          -LongDescription "Autocomplete github emoji" `
                          -ScriptBlock {
