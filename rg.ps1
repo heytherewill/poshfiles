@@ -2,6 +2,10 @@ function rgf {
     $input | rg --files | rg $args
 }
 
+function rgf! {
+    $input | rg --files --no-ignore | rg $args
+}
+
 function rgfo {
     $files = $input | rg --files | rg $args
     Invoke-Code($files)
