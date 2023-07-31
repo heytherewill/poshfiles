@@ -24,13 +24,11 @@ Import-Module posh-git
 Import-Module PSReadLine
 . "$root/psreadline.ps1"
 
-# zoxide
-Invoke-Expression (& {
-  (zoxide init --hook 'pwd' powershell) -join "`n"
-})
-
 # Prompt
 oh-my-posh init pwsh --config $root/heytherewill.omp.json | Invoke-Expression
+
+# zoxide
+Invoke-Expression (& { (zoxide init --hook 'pwd' powershell | Out-String) })
 
 # Fish-like autocompletion
 set-psreadlineoption -predictionsource history
