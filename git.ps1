@@ -96,6 +96,10 @@ function gpf() {
     git push -f
 }
 
+function gp!() {
+    git push -f
+}
+
 function gpr() {
     git push --set-upstream origin (git branch --show-current)
 }
@@ -142,7 +146,8 @@ function gst() {
 }
 
 function gwip() {
-    gcma(":construction: WIP")
+    gaa
+    git commit -n -m "WIP"
 }
 
 function gp() {
