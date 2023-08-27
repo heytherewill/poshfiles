@@ -90,6 +90,19 @@ function gpr() {
     git push --set-upstream origin (git branch --show-current)
 }
 
+function gra() {
+    git rebase --abort
+}
+
+function grc() {
+    git rebase --continue
+}
+
+function grc!() {
+    gaa
+    git rebase --continue
+}
+
 function grh($size) {
     git reset HEAD~$size
 }
