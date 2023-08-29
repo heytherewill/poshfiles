@@ -17,6 +17,16 @@ function gaa() {
     git add -A
 }
 
+function gama() {
+    gaa
+    git commit --amend
+}
+
+function gama!() {
+    gaa
+    git commit --amend --no-edit -n
+}
+
 function gap($file) {
 	git add -p $file
 }
