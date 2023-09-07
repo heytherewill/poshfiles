@@ -53,6 +53,11 @@ function gfix() {
     }
 }
 
+function gfix!() {
+    gaa
+    gfix
+}
+
 function gspull($branchName) {
     gs
     git pull
@@ -114,7 +119,10 @@ function grc() {
 
 function grc!() {
     gaa
+    $sequenceEditor=$env:GIT_SEQUENCE_EDITOR
+    $env:GIT_SEQUENCE_EDITOR=$true
     git rebase --continue
+    $env:GIT_SEQUENCE_EDITOR=$sequenceEditor
 }
 
 function grh($size) {
