@@ -37,6 +37,6 @@ Set-PSReadLineKeyHandler -Chord 'Shift+<' `
 
     $pickedEmoji = $emojiList | Invoke-Fzf
 
-    $textToInject = if ($null -eq $pickedEmoji) { ":" } else { $emojiTable[$pickedEmoji] }
+    $textToInject = if ($null -eq $pickedEmoji) { "<" } else { $emojiTable[$pickedEmoji] }
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert($textToInject)
 }
