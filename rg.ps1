@@ -11,9 +11,17 @@ function rgfo {
     Invoke-Code($files)
 }
 
+function rgfoa {
+    $input | rg --files | rg -l $args | ForEach-Object { Invoke-Code($_) }
+}
+
 function rgo {
     $files = rg -l $args
     Invoke-Code($files)
+}
+
+function rgoa {
+    rg -l $args | ForEach-Object { Invoke-Code($_) }
 }
 
 function Invoke-Code($files) {
