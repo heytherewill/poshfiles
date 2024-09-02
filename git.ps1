@@ -78,9 +78,18 @@ function gcm($message) {
     git commit -m $message
 }
 
+function gcm!($message) {
+    git commit -n -m $message
+}
+
 function gcma($message) {
     gaa
     git commit -m $message
+}
+
+function gcma!($message) {
+    gaa
+    git commit -n -m $message
 }
 
 function glog() {
