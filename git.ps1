@@ -106,6 +106,11 @@ function gnuke($file) {
     }
 }
 
+function gnuke!($numberOfCommits) {
+    grh $numberOfCommits
+    gnuke
+}
+
 function gpf() {
     git push -f
 }
