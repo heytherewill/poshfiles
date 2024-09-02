@@ -159,7 +159,7 @@ function gsp() {
 }
 
 function gst() {
-	git status -sb
+	git status -sbuno
 }
 
 function gwip() {
