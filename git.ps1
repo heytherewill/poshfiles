@@ -49,7 +49,7 @@ function gfix() {
     if ($null -eq $commitHash) {
         Write-Output "Operation cancelled"
     } else {
-        git commit --fixup $commitHash.Substring(0, 7)
+        git commit -n --fixup $commitHash.Substring(0, 7)
     }
 }
 
