@@ -13,6 +13,10 @@ if ($IsWindows) {
   . "$root/windows.ps1"
 }
 
+if ($IsLinux) {
+  . "$root/linux.ps1"
+}
+
 if ($IsMacOS) {
   . "$root/macos.ps1"
 }

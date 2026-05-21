@@ -37,13 +37,18 @@ if ($IsWindows) {
         scoop bucket add java
     } 
 
-    scoop install FiraCode-NF ripgrep powertoys tokei gh micro fzf bat neofetch tre-command zoxide grex openjdk11 oh-my-posh
+    scoop install FiraCode-NF ripgrep powertoys tokei gh micro fzf bat neofetch tre-command zoxide openjdk11 oh-my-posh
 }
 
 if ($IsMacOS) {
     brew tap homebrew/cask-fonts
     brew install --cask font-FiraCode-nerd-font
-    brew install ripgrep tokei gh micro fzf bat neofetch tre-command zoxide grex openjdk@11 jandedobbeleer/oh-my-posh/oh-my-posh
+    brew install ripgrep tokei gh micro fzf bat neofetch tre-command zoxide openjdk@11 jandedobbeleer/oh-my-posh/oh-my-posh
+}
+
+if ($IsLinux) {
+    sudo apt-get install ripgrep tokei gh micro fzf bat tre-command zoxideoh
+    curl -s https://ohmyposh.dev/install.sh | bash -s
 }
 
 Write-Host ""

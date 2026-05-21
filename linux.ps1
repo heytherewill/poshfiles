@@ -1,0 +1,1 @@
+$env:PATH="$($env:PATH)$($pathSeparator)/home/$(whoami)/.local/bin"

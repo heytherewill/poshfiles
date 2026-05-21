@@ -16,6 +16,12 @@ macOS:
 git clone https://github.com/heytherewill/poshfiles.git ~/.config/powershell
 ```
 
+Linux:
+```terminal
+git clone https://github.com/heytherewill/poshfiles.git /home/$(whoami)/.config/powershell
+```
+
+
 - Run `install.ps1` to install dependencies.
 
 |Windows|macOS|
@@ -36,7 +42,6 @@ git clone https://github.com/heytherewill/poshfiles.git ~/.config/powershell
 - [bat](https://github.com/sharkdp/bat)
 - [neofetch](https://github.com/dylanaraps/neofetch)
 - [tre](https://github.com/dduan/tre)
-- [grex](https://github.com/pemistahl/grex)
 
 ### Windows Only
 - [Scoop](https://github.com/lukesampson/scoop)
